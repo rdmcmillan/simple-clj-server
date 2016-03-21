@@ -1,18 +1,19 @@
-(ns webserver.page
+(ns web-server.page
   (require
    [hiccup.core        :refer :all]
    [hiccup.page        :refer :all]))
 
 (defn render-page
+  "This is a Hiccup html template"
   [_]
   (html5 {:lang "en"}
-         [:head [:title "PN Admin | Login"]
+         [:head [:title "Page | Title"]
                 [:link {:rel  "shortcut icon"
-                        :href "images/icons/facicon.ico"}]
+                        :href "images/icons/favicon.ico"}]
                 [:link {:rel  "icon"
                         :type "image/ico"
-                        :href "images/icons/facicon.ico"}]]
-         [:body [:h1 "This is the Web Page"]
-                [:ul {:class "index"} [:li "Page1"]
-                                      [:li "Page2"]
-                                      [:li "Page3"]]]))
+                        :href "images/icons/favicon.ico"}]]
+         [:body [:h1 "This is a web page."]
+                [:ul {:class "list"} [:li "item1"]
+                                     [:li "item2"]
+                                     [:li "item3"]]]))

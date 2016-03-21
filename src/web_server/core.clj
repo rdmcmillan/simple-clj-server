@@ -5,13 +5,14 @@
    [compojure.handler  :refer [site]]
    [compojure.core     :refer [defroutes GET POST]]
    [compojure.route    :as route]
-   [webserver.page     :refer :all])
+   [web-server.page    :refer :all])
   (:gen-class))
 
 (defonce server (atom nil))
 
 (defroutes app-routes
   (GET "/" [] render-page)
+  (route/resources "/")
   (route/not-found "<p>Page not found.</p>"))
 
 (defn start-server
@@ -26,7 +27,9 @@
     (reset! server nil)))
 
 (defn -main
-  "I don't do a whole lot ... yet."
+  "Starts up a simple server. Takes an optional port number. If not provided,
+defaults to 8080."
   [& args]
-  (start-server 8080))
-
+  (start-server (if (first args)
+                  (first args)
+                  8080)))
