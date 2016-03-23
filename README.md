@@ -1,32 +1,27 @@
 # web-server
 
-FIXME: description
+A very simple web server intended for gently intoducing the uninitiated into full-stack Clojure development.
 
 ## Installation
 
-Download from http://example.com/FIXME.
+Find it at https://github.com/rdmcmillan/simple-clj-server
 
 ## Usage
 
-FIXME: explanation
-
-    $ java -jar web-server-0.1.0-standalone.jar [args]
+Fire up a repl and call (-main) from web-server.core.
+Play around and become familliar with:
+* [http-kit server](http://www.http-kit.org)
+* [Compojure routing](https://github.com/weavejester/compojure)
+* [Hiccup HTML templating](https://github.com/weavejester/hiccup)
+* [Garden CSS templating](https://github.com/noprompt/garden)
 
 ## Options
 
-FIXME: listing of options this app accepts.
+Serves pages, by default, on 8080. Call -main with another port if you so wish.
 
 ## Examples
 
-...
-
-### Bugs
-
-...
-
-### Any Other Sections
-### That You Think
-### Might be Useful
+(-main 8888) for port 8888
 
 ## License
 
