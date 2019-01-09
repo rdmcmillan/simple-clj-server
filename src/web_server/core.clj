@@ -1,5 +1,5 @@
 (ns web-server.core
-  (require
+  (:require
    [org.httpkit.server :refer :all]
    [compojure.route    :refer [files not-found]]
    [compojure.handler  :refer [site]]

@@ -1,5 +1,5 @@
 (ns web-server.styles
-  (require
+  (:require
    [garden.core :refer :all]))
 
 (def accent-clr "#033E66")

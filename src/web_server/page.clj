@@ -1,5 +1,5 @@
 (ns web-server.page
-  (require
+  (:require
    [hiccup.core :refer :all]
    [hiccup.page :refer :all]))
 
